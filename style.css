@@ -1,0 +1,178 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: #f2f2f7; /* iOS Hintergrundfarbe */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.input-group, .output-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555555;
+    font-weight: 500;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    -webkit-appearance: none; /* iOS spezifisch */
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007aff; /* iOS Blau */
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.checkbox-group p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #555555;
+    font-weight: 500;
+}
+
+.day-input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px; /* Abstand zwischen Checkbox/Label und Input-Feld */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    flex-grow: 1; /* Lässt das Label den verfügbaren Platz einnehmen */
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    border: 2px solid #c7c7cc;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0; /* Verhindert, dass die Checkbox schrumpft */
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background-color: #007aff;
+    border-color: #007aff;
+}
+
+.checkbox-group input[type="checkbox"]:checked::before {
+    content: '✓';
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.daily-expense-input {
+    width: 100px; /* Feste Breite für das Eingabefeld der Tagesausgaben */
+    padding: 8px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+
+output {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    background-color: #e9e9eb; /* iOS Hellgrau */
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007aff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    -webkit-appearance: none; /* iOS spezifisch */
+}
+
+button:hover {
+    background-color: #005bb8;
+}
+
+button:active {
+    background-color: #004080;
+}
+
+/* Anpassungen für kleinere Bildschirme */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    input[type="number"],
+    input[type="text"],
+    output,
+    button {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .daily-expense-input {
+        width: 80px; /* Etwas schmaler auf kleinen Bildschirmen */
+    }
+}

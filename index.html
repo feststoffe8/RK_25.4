@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reisekosten WebApp Version 25.4</title> <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reisekosten WebApp Version 25.4</h1> <div class="input-group">
+            <label for="calendarWeek">Kalenderwoche:</label>
+            <input type="number" id="calendarWeek" placeholder="z.B. 25" min="1" max="53">
+        </div>
+
+        <div class="input-group">
+            <label for="caseName">Fall-Name:</label>
+            <input type="text" id="caseName" placeholder="z.B. Projekt Alpha">
+        </div>
+
+        <div class="input-group">
+            <label for="hotelName">Hotel-Name:</label>
+            <input type="text" id="hotelName" placeholder="z.B. Grand Hotel">
+        </div>
+
+        <div class="input-group">
+            <label for="hotelCost">Gesamtbetrag Hotelkosten (€):</label>
+            <input type="number" id="hotelCost" step="0.01" placeholder="z.B. 450.75">
+        </div>
+
+        <div class="checkbox-group">
+            <p>Wochentage mit Reisekosten:</p>
+            <div class="day-input-wrapper">
+                <label><input type="checkbox" class="day-checkbox" data-day="Montag"> Montag</label>
+                <input type="number" class="daily-expense-input" data-day="Montag" placeholder="Ausgaben (€)" step="0.01" style="display:none;">
+            </div>
+            <div class="day-input-wrapper">
+                <label><input type="checkbox" class="day-checkbox" data-day="Dienstag"> Dienstag</label>
+                <input type="number" class="daily-expense-input" data-day="Dienstag" placeholder="Ausgaben (€)" step="0.01" style="display:none;">
+            </div>
+            <div class="day-input-wrapper">
+                <label><input type="checkbox" class="day-checkbox" data-day="Mittwoch"> Mittwoch</label>
+                <input type="number" class="daily-expense-input" data-day="Mittwoch" placeholder="Ausgaben (€)" step="0.01" style="display:none;">
+            </div>
+            <div class="day-input-wrapper">
+                <label><input type="checkbox" class="day-checkbox" data-day="Donnerstag"> Donnerstag</label>
+                <input type="number" class="daily-expense-input" data-day="Donnerstag" placeholder="Ausgaben (€)" step="0.01" style="display:none;">
+            </div>
+            <div class="day-input-wrapper">
+                <label><input type="checkbox" class="day-checkbox" data-day="Freitag"> Freitag</label>
+                <input type="number" class="daily-expense-input" data-day="Freitag" placeholder="Ausgaben (€)" step="0.01" style="display:none;">
+            </div>
+            <div class="day-input-wrapper">
+                <label><input type="checkbox" class="day-checkbox" data-day="Samstag"> Samstag</label>
+                <input type="number" class="daily-expense-input" data-day="Samstag" placeholder="Ausgaben (€)" step="0.01" style="display:none;">
+            </div>
+            <div class="day-input-wrapper">
+                <label><input type="checkbox" class="day-checkbox" data-day="Sonntag"> Sonntag</label>
+                <input type="number" class="daily-expense-input" data-day="Sonntag" placeholder="Ausgaben (€)" step="0.01" style="display:none;">
+            </div>
+        </div>
+
+        <div class="output-group">
+            <label for="totalTravelCost">Gesamtbetrag Reisekosten (€):</label>
+            <output id="totalTravelCost">0.00</output>
+        </div>
+
+        <button id="generateReport">Bericht erstellen / im Browser öffnen</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
